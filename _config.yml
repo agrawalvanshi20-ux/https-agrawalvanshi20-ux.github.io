@@ -1,0 +1,17 @@
+title: Vanshika Agrawal
+tagline: Lab and facilities technician, Nuffield Department of Clinical Neurosciences
+description: >-
+  Lab and facilities technician in clinical neurosciences at Oxford.
+  Immunology, neuroscience, and the craft of keeping a lab running.
+url: "https://agrawalvanshi20-ux.github.io"
+baseurl: ""
+
+# Fill these in and they appear in the footer. Leave one blank to hide it.
+email: ""
+linkedin: ""
+orcid: ""
+
+permalink: /notebook/:title/
+
+exclude:
+  - README.md

@@ -1,0 +1,36 @@
+---
+layout: default
+title: Notebook
+description: Notes from the bench on methods, kit and the things that go wrong.
+permalink: /notebook/
+---
+
+<div class="wrap">
+  <div class="page-head section-fitc">
+    <h1>Notebook</h1>
+    <p>Notes from the bench. Methods, kit, and the things that go wrong before they go right.</p>
+  </div>
+</div>
+
+<section class="section section-fitc">
+  <div class="wrap">
+    <div class="section-body">
+      {% if site.posts.size > 0 %}
+      <ul class="posts">
+        {% for post in site.posts %}
+        <li>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.summary %}<p class="excerpt">{{ post.summary }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <div class="stub">
+        <h3>Nothing posted yet</h3>
+        <p>Notes go in the <code>_posts</code> folder, one Markdown file each.</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

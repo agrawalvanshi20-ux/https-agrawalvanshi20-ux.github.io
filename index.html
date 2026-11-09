@@ -1,0 +1,97 @@
+---
+layout: default
+hero: true
+---
+
+<section class="section section-cy5">
+  <div class="wrap">
+    <div class="section-body">
+      <h2>Hello</h2>
+      <p class="lead">I keep a neuroscience lab running, and I came to it through immunology.</p>
+      <p>I am a lab and facilities technician in the Nuffield Department of Clinical
+        Neurosciences at Oxford. Before this I spent two years as an assistant lab
+        technician in the School of Food Science and Nutrition at the University of
+        Leeds, where I also did my MSc in Infection, Immunology and Human Disease.
+        My first degree was in biotechnology, in India, and I finished it with
+        first class honours.</p>
+      <p>The brain is the thing I have kept circling back to since I started reading
+        immunology properly, so a neurosciences department is exactly where I wanted
+        to end up.</p>
+      <p>Food is the other thread, and I have been lucky that it turned into work
+        rather than staying a thing I did at home. Two years in food science and
+        nutrition gave me a whole second set of questions about what we eat and what
+        it does to us, and I have no intention of putting that one down.</p>
+      <p>Day to day, my job is the unglamorous half of research: the equipment
+        working, the stocks in, the protocols followed, the samples where they should
+        be. Good science rests on it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dapi">
+  <div class="wrap">
+    <div class="section-body">
+      <h2>The route here</h2>
+      <ol class="route">
+        <li class="r-cy5">
+          <span class="yr">2026 to now</span>
+          <span class="what">Lab and facilities technician</span>
+          <span class="where">Nuffield Department of Clinical Neurosciences, University of Oxford</span>
+        </li>
+        <li class="r-fitc">
+          <span class="yr">2 years</span>
+          <span class="what">Assistant lab technician</span>
+          <span class="where">School of Food Science and Nutrition, University of Leeds</span>
+        </li>
+        <li class="r-dapi">
+          <span class="yr">MSc</span>
+          <span class="what">Infection, Immunology and Human Disease</span>
+          <span class="where">University of Leeds. Lab-based research project in virology</span>
+        </li>
+        <li class="r-cy3">
+          <span class="yr">BSc</span>
+          <span class="what">Biotechnology, first class</span>
+          <span class="where">India</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section section-cy3">
+  <div class="wrap">
+    <div class="section-body">
+      <h2>What I am interested in</h2>
+      <p>Where immunology meets the brain, mostly. A fuller version of this lives on the
+        <a href="{{ '/research/' | relative_url }}">research interests</a> page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-fitc">
+  <div class="wrap">
+    <div class="section-body">
+      <h2>Notebook</h2>
+      <p>Notes from the bench: things that broke, things that worked, and the methods
+        I want to remember next time.</p>
+
+      {% if site.posts.size > 0 %}
+      <ul class="posts">
+        {% for post in site.posts limit: 3 %}
+        <li>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.summary %}<p class="excerpt">{{ post.summary }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <p style="margin-top:1.5rem"><a href="{{ '/notebook/' | relative_url }}">All notes</a></p>
+      {% else %}
+      <div class="stub">
+        <h3>Nothing posted yet</h3>
+        <p>First note coming soon.</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
